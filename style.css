@@ -1,13 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
 body {
   margin: 0;
   padding: 0;
   position: absolute;
   top: 0;
   left: 0;
+  font-family: "Manrope", sans-serif;
   overflow: hidden;
   background-image: url("./assets/texture.png");
 }
 
 * {
   cursor: crosshair;
+}
+
+#select-color {
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  margin: 30px;
+  border-radius: 7px;
+  position: absolute;
+  padding: 10px;
 }
