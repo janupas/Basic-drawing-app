@@ -27,6 +27,13 @@ canvas.addEventListener("mousemove", (e) => {
   }
 });
 
+canvas.addEventListener("click", (e) => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+
+  drawCircle();
+});
+
 canvas.addEventListener("mousedown", (e) => {
   isMouseDown = true;
 });
