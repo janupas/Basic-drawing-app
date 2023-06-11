@@ -15,12 +15,27 @@ body {
   cursor: crosshair;
 }
 
-#select-color {
+#select {
   width: 250px;
-  height: 350px;
   background-color: white;
   margin: 30px;
   border-radius: 7px;
   position: absolute;
   padding: 10px;
+}
+
+#select p {
+  font-size: 13px;
+}
+
+.color-box {
+  display: flex;
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 50%;
+  cursor: pointer;
 }
