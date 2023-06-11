@@ -77,8 +77,17 @@ document.addEventListener("DOMContentLoaded", () => {
     sizebox.classList.add("size");
     sizesBox.appendChild(sizebox);
 
-    sizebox.innerHTML = size;
-    sizeSelectObjects.push(sizebox);
+    if (size == 3) {
+      sizebox.style.backgroundColor = "white";
+    } else {
+      if (size == 7) {
+        sizebox.style.backgroundColor = "gray";
+      } else {
+        sizebox.style.backgroundColor = "black";
+      }
+    }
+
+    sizeSelectObjects.push({ element: sizebox, size: size });
   });
 
   brushColorContainer.appendChild(colorsBox);
@@ -93,8 +102,8 @@ const update = () => {
   });
 
   sizeSelectObjects.forEach((obj) => {
-    obj.addEventListener("click", (e) => {
-      currentBrushSize = parseInt(obj.innerHTML) || 3;
+    obj.element.addEventListener("click", (e) => {
+      currentBrushSize = parseInt(obj.size) || 3;
     });
   });
 };
